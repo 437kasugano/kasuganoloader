@@ -25,23 +25,33 @@ if '%errorlevel%' NEQ '0' (
 ::--------------------------------------
 
 ::ENTER YOUR CODE BELOW:
-
+:start
+cls
 @echo off
 title CheatLoader by 437Kasugano#0437
 goto Menu
 
 :Menu
 echo Hello %username%!
-echo Enter the number of your cheat
+echo Select what you want
+echo Please, do not select higher numbers than displayed, the loader might act weird!
 echo [1] OTCv3 + new models
 echo [2] Osiris
 echo [3] Weave 2.5
 echo [4] RaweTrip
+echo [5] Download CFGS
+echo [6] VirusTotal scans
+echo [7] Buy cheats (reselling services)
+echo [8] Exit the loader
 set /p car=
 if %car% == 1 goto otc
 if %car% == 2 goto osiris
 if %car% == 3 goto weave
 if %car% == 4 goto rawetrip
+if %car% == 5 goto cfgs
+if %car% == 6 goto vt
+if %car% == 7 goto buy
+if %car% == 8 goto close
 
 :otc
 cls
@@ -49,7 +59,7 @@ echo Injecting OTCv3 + new models + VAC Bypass
 taskkill /f /im csgo.exe
 %CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
 START steam://rungameid/730
-ping -n 20 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\agents\Kirin.exe
 %CD%\Resources\otcv3\Kirin.exe
 exit
@@ -60,7 +70,7 @@ echo Injecting Osiris + VAC Bypass
 taskkill /f /im csgo.exe
 %CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
 START steam://rungameid/730
-ping -n 20 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\osiris\Kirin.exe
 exit
 
@@ -70,7 +80,7 @@ echo Injecting Weave 2.5 + VAC Bypass
 taskkill /f /im csgo.exe
 %CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
 START steam://rungameid/730
-ping -n 20 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\weave25\Kirin.exe
 exit
 
@@ -80,6 +90,76 @@ echo Injecting RaweTrip + VAC Bypass
 taskkill /f /im csgo.exe
 %CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
 START steam://rungameid/730
-ping -n 20 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\rawetrip\Kirin.exe
 exit
+
+:close
+cls
+echo See you next time!
+ping -n 3 localhost >nul
+exit
+
+:cfgs
+cls
+echo Redirecting to Discord server
+start https://discord.gg/eSucMJSGb2
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:vt
+cls
+echo Redirecting to VirusTotal links
+start https://pastebin.com/raw/EVJM3kL0
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:buy
+cls
+echo [1] OTCv4 - Skrill
+echo [2] OTCv4 - PayPal
+echo [3] Neverlose.cc - PayPal/Skrill/more
+echo [4] Fatality.win - PayPal/Skrill/more
+echo [5] Nixware.cc - PayPal/Skrill/more
+echo [6] Go back to start
+set /p car=
+if %car% == 1 goto otcskrill
+if %car% == 2 goto otcpaypal
+if %car% == 3 goto nl
+if %car% == 4 goto ft
+if %car% == 5 goto nix
+if %car% == 6 goto start
+
+:otcskrill
+cls
+Redirecting to OTCv4 Skrill reselling..
+start https://discord.gg/VzgJsyU5
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:otcpaypal
+start https://discord.gg/t5pMHdmQ
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:nl
+start https://discord.gg/G5SNYbr8
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:ft
+start https://discord.gg/G5SNYbr8
+ping -n 5 localhost >nul
+cls
+goto :start
+
+:nix
+start https://discord.gg/G5SNYbr8
+ping -n 5 localhost >nul
+cls
+goto :start
