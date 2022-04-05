@@ -42,7 +42,8 @@ echo [4] RaweTrip
 echo [5] Download CFGS
 echo [6] VirusTotal scans
 echo [7] Buy cheats (reselling services)
-echo [8] Exit the loader
+echo [8] Legacy HvH tab
+echo [9] Exit the loader
 set /p car=
 if %car% == 1 goto otc
 if %car% == 2 goto osiris
@@ -51,7 +52,8 @@ if %car% == 4 goto rawetrip
 if %car% == 5 goto cfgs
 if %car% == 6 goto vt
 if %car% == 7 goto buy
-if %car% == 8 goto close
+if %car% == 8 goto oldhvh
+if %car% == 9 goto close
 
 :otc
 cls
@@ -163,3 +165,37 @@ start https://discord.gg/G5SNYbr8
 ping -n 5 localhost >nul
 cls
 goto :start
+
+:oldhvh
+cls
+echo Warning, before injecting cheats. Run legacy hvh first.
+echo [1] jre.codes
+echo [2] onecrack legacy
+echo [3] How to download legacy hvh?
+echo [4] Go back to start
+set /p car=
+if %car% == 1 goto zrekody
+if %car% == 2 goto legacyot
+if %car% == 3 goto leg
+if %car% == 4 goto start
+
+:zrekody
+cls
+echo Injecting jre.codes
+%CD%\Resources\jrekody\Kirin.exe
+exit
+
+:legacyot
+cls
+echo Injecting onecrack legacy
+%CD%\Resources\legacyot\Kirin.exe
+exit
+
+:leg
+cls
+start https://drive.google.com/u/0/uc?id=1z5rFdNVpue6fj3I1utQxZZwFcfrb7RXY&export=download
+echo Download this, extract on desktop and run csgo.exe
+echo If there is a error showing up restart steam completly then try again
+echo [1] To go back
+set /p car=
+if %car% == 1 goto oldhvh
