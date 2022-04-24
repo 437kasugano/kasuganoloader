@@ -39,27 +39,26 @@ echo [1] OTCv3 + new models
 echo [2] Osiris
 echo [3] Weave 2.5
 echo [4] RaweTrip
-echo [5] Download CFGS
-echo [6] VirusTotal scans
-echo [7] Buy cheats (reselling services)
-echo [8] Legacy HvH tab
-echo [9] Exit the loader
+echo [5] Novoline.hook
+echo [6] Download CFGS
+echo [7] VirusTotal scans
+echo [8] Buy cheats (reselling services)
+echo [9] Legacy HvH tab
+echo [10] Exit the loader
 set /p car=
 if %car% == 1 goto otc
 if %car% == 2 goto osiris
 if %car% == 3 goto weave
 if %car% == 4 goto rawetrip
-if %car% == 5 goto cfgs
-if %car% == 6 goto vt
-if %car% == 7 goto buy
-if %car% == 8 goto oldhvh
-if %car% == 9 goto close
-
+if %car% == 5 goto novo
+if %car% == 6 goto cfgs
+if %car% == 7 goto vt
+if %car% == 8 goto reselling
+if %car% == 9 goto legacy
+if %car% == 10 goto close
 :otc
 cls
-echo Injecting OTCv3 + new models + VAC Bypass
-taskkill /f /im csgo.exe
-%CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
+echo Injecting OTCv3 + new models
 START steam://rungameid/730
 ping -n 40 localhost >nul
 %CD%\Resources\agents\Kirin.exe
@@ -78,9 +77,7 @@ exit
 
 :weave
 cls
-echo Injecting Weave 2.5 + VAC Bypass
-taskkill /f /im csgo.exe
-%CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
+echo Injecting Weave 2.5
 START steam://rungameid/730
 ping -n 40 localhost >nul
 %CD%\Resources\weave25\Kirin.exe
@@ -88,9 +85,7 @@ exit
 
 :rawetrip
 cls
-echo Injecting RaweTrip + VAC Bypass
-taskkill /f /im csgo.exe
-%CD%\Resources\vacbypassloader\VAC-Bypass-Loader.exe
+echo Injecting RaweTrip
 START steam://rungameid/730
 ping -n 40 localhost >nul
 %CD%\Resources\rawetrip\Kirin.exe
@@ -117,6 +112,14 @@ start https://pastebin.com/raw/EVJM3kL0
 ping -n 5 localhost >nul
 cls
 goto :start
+
+:novo
+cls
+echo Injecting Novoline.hook
+START steam://rungameid/730
+ping -n 40 localhost >nul
+%CD%\Resources\novo\Kirin.exe
+exit
 
 :buy
 cls
