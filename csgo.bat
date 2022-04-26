@@ -35,11 +35,11 @@ goto Menu
 echo Hello %username%!
 echo Select what you want
 echo Please, do not select higher numbers than displayed, the loader might act weird!
-echo [1] OTCv3 + new models
+echo [1] OTCv3 + new models [BROKEN!]
 echo [2] Osiris
 echo [3] Weave 2.5
-echo [4] RaweTrip
-echo [5] Novoline.hook
+echo [4] RaweTrip [BROKEN!]
+echo [5] Novoline.hook [BROKEN!]
 echo [6] Download CFGS
 echo [7] VirusTotal scans
 echo [8] Buy cheats (reselling services)
