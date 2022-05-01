@@ -6,4 +6,4 @@
 > It has new names for replaced models.
 > GLHF.
 > ps. U can find the script in modelscripts folder.
-
+# If You need VT of every file that it contains, [click me](https://pastebin.com/raw/Ye7LcsAv)
