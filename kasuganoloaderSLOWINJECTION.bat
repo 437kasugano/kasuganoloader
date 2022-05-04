@@ -54,7 +54,7 @@ if %car% == 7 goto close
 cls
 echo Injecting OTCv3 + new models
 START steam://rungameid/730
-ping -n 15 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\agents\Kirin.exe
 %CD%\Resources\otcv3\Kirin.exe
 exit
@@ -73,7 +73,7 @@ exit
 cls
 echo Injecting Weave 2.5
 START steam://rungameid/730
-ping -n 15 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\weave25\Kirin.exe
 exit
 
@@ -81,7 +81,7 @@ exit
 cls
 echo Injecting RaweTrip
 START steam://rungameid/730
-ping -n 15 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\rawetrip\Kirin.exe
 exit
 
@@ -91,33 +91,18 @@ echo See you next time!
 ping -n 3 localhost >nul
 exit
 
-:cfgs
-cls
-echo Redirecting to Discord server
-start https://discord.gg/eSucMJSGb2
-ping -n 5 localhost >nul
-cls
-goto :start
-
 :otc2
 cls
 echo Injecting OTCv2
 start steam://rungameid/730
-ping -n 15 localhost >nul
+ping -n 40 localhost >nul
 %CD%\Resources\ot2\Kirin.exe
 exit
-
-:vt
-cls
-echo Redirecting to VirusTotal links
-start https://pastebin.com/raw/Ye7LcsAv
-ping -n 5 localhost >nul
-cls
-goto :start
 
 :nixwarecrack
 cls
 echo Injecting Nixware CRACK
-%CD%\Resources\nix\nixcrackloader.exe
 START steam://rungameid/730
+ping -n 40 localhost >nul
+%CD%\Resources\nix\nixcrackloader.exe
 exit
